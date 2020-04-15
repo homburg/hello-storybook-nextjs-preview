@@ -6,11 +6,13 @@
 # Usage
 
 ```bash
-# Install
+# install
 yarn
 
-# Start
+# start
 $ yarn dev
+
+#  http://localhost:3000/storybook
 ```
 
 # Static build

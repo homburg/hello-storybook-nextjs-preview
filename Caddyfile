@@ -1,0 +1,15 @@
+# /app/assets/ -> http://localhost:3000/
+# /app/ -> http://localhost:3000/
+# / -> http://localhost:9000/ 
+
+http://localhost:4000/app* {
+    uri strip_prefix /app/assets
+    reverse_proxy http://localhost:3000
+}
+
+http://localhost:4000 {
+    # reverse_proxy http://localhost:9000
+    file_server * browse {
+        root ./storybook-static
+    }
+}
